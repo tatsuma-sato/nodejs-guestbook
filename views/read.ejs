@@ -10,34 +10,49 @@
   <body>
     <div class="global_container">
       <header class="header">
-        <div class="header_container">
-          <div class="header_left">
-            <div class="logo_container">
-              <img src="../public/nodejs-logo.png" alt="node" />
+        <div class="header__container">
+          <div class="header__left">
+            <div class="logo__container">
+              <img src="nodejs-logo.png" alt="node" />
             </div>
           </div>
-          <div class="header_right">
-            <a href="/">Home</a>
-            <a href="/leave-message">Leave a message</a>
-            <a href="/read-message">Read messages</a>
+          <div class="header__right">
+            <ul class="header__links">
+              <li class="header__link">
+                <a href="/">Home</a>
+              </li>
+              <li class="header__link">
+                <a href="/leave-message">Leave a message</a>
+              </li>
+              <li class="header__link">
+                <a href="/read-message">Read messages</a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
 
       <div class="container">
-        <% for (let i = 0; i < messages.length; i++){ %>
-        <div class="message_container">
-          <ul class="messages">
-            <li><%= messages[i] %></li>
-          </ul>
-        </div>
+        <div class="message">
+          <div class="message__container">
+            <h2>Your messages</h2>
+            <ul class="message__list">
+              <% for (let i = 0; i < messages.length; i++){ %>
 
-        <% } %>
+              <li class="message__item">
+                <span><%= i+1 %>--</span>
+                <%= messages[i].message %>
+              </li>
+
+              <% } %>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="footer">
-        <div class="footer_container">
-          <p>Tatsuma &copy;</p>
+        <div class="footer__container">
+          <p class="footer__text">Tatsuma &copy;</p>
         </div>
       </div>
     </div>

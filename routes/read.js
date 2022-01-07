@@ -10,7 +10,8 @@ router.get("/read-message", (req, res, next) => {
       try {
         messages = JSON.parse(data);
       } catch (error) {
-        res.send("file does not exist...\nPlease neave a message first");
+        console.log(error);
+        res.send("file does not exist...\nPlease leave a message first");
       }
     }
     data = messages;
