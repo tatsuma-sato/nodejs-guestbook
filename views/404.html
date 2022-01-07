@@ -8,32 +8,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="global_container">
+    <div class="global__container">
       <header class="header">
-        <div class="header_container">
-          <div class="header_left">
-            <div class="logo_container">
-              <img src="../public/nodejs-logo.png" alt="node" />
+        <div class="header__container">
+          <div class="header__left">
+            <div class="logo__container">
+              <img src="nodejs-logo.png" alt="node" />
             </div>
           </div>
-          <div class="header_right">
-            <a href="/">Home</a>
-            <a href="/leave-message">Leave a message</a>
-            <a href="/read-message">Read messages</a>
+          <div class="header__right">
+            <ul class="header__links">
+              <li class="header__link">
+                <a href="/">Home</a>
+              </li>
+              <li class="header__link">
+                <a href="/leave-message">Leave a message</a>
+              </li>
+              <li class="header__link">
+                <a href="/read-message">Read messages</a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
 
       <div class="container">
-        <h1 class="error-message">404 Error!!! Page NOT Found</h1>
-        <button class="btn"><a href="/">Back to Home</a></button>
-      </div>
-
-      <div class="footer">
-        <div class="footer_container">
-          <p>Tatsuma &copy;</p>
+        <div class="error">
+          <h1 class="error-message">404 Error!!! Page NOT Found</h1>
+          <button class="btn" onclick="location.href='/'">Back to Home</button>
         </div>
       </div>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__text">Tatsuma &copy;</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
